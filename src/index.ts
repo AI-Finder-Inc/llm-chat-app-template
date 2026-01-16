@@ -11,14 +11,11 @@ import { Env, ChatMessage } from "./types";
 
 export default {
   async fetch(request, env): Promise<Response> {
-    const query = 'Which one is cooler?'
+    const query = 'women makeup'
     const contexts = [
-      {
-        text: 'a cyberpunk lizzard'
-      },
-      {
-        text: 'a cyberpunk cat'
-      }
+      {text: 'nice black suite'},
+      { text: 'red lipstick' },
+      { text: 'iphone 15 pro max' }
     ];
 
     const response = await env.AI.run('@cf/baai/bge-reranker-base', { query, contexts });
